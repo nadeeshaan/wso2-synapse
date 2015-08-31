@@ -122,4 +122,28 @@ public interface Library extends SynapseArtifact {
      */
     public void setLibStatus(boolean status);
 
+    /**
+     * Get the artifact container name
+     * @return artifactContainerName
+     */
+    public String getArtifactContainerName();
+
+    /**
+     * Set the artifact container name
+     * @param artifactContainerName
+     */
+    public void setArtifactContainerName(String artifactContainerName);
+
+    /**
+     * Get the isEdited state
+     * @return isEdited
+     */
+    public boolean getIsEdited();
+
+    /**
+     * Set the is edited state
+     * @param isEdited
+     */
+    public void setIsEdited(boolean isEdited);
+
 }

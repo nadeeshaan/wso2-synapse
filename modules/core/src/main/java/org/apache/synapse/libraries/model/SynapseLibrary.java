@@ -53,6 +53,9 @@ public class SynapseLibrary implements Library {
     private ClassLoader libClassLoader = null;
     private String fileName;
 
+    private String artifactContainerName;
+    private boolean isEdited;
+
     private boolean libStatus = false;
 
     public SynapseLibrary(String name, String packageName) {
@@ -234,4 +237,19 @@ public class SynapseLibrary implements Library {
         this.libStatus = status;
     }
 
+    public String getArtifactContainerName() {
+        return artifactContainerName;
+    }
+
+    public void setArtifactContainerName(String artifactContainerName) {
+        this.artifactContainerName = artifactContainerName;
+    }
+
+    public boolean getIsEdited() {
+        return isEdited;
+    }
+
+    public void setIsEdited(boolean isEdited) {
+        this.isEdited = isEdited;
+    }
 }

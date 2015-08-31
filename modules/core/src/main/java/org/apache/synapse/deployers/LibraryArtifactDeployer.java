@@ -58,6 +58,8 @@ public class LibraryArtifactDeployer extends AbstractSynapseArtifactDeployer {
 		    .getArtifactDeploymentStore();
 
 	    Library lib = LibDeployerUtils.createSynapseLibrary(libFilePath);
+		/** Set the artifact container name from which the library deployed */
+		lib.setArtifactContainerName(customLogContent);
 	    String libArtifactName = lib.getQName().toString();
 		if (this.getSynapseConfiguration().getSynapseLibraries().get(lib.getQName().toString()) != null) {
 			log.warn("Hot deployment thread picked up an already deployed synapse library - Ignoring");
